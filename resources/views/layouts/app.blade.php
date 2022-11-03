@@ -6,12 +6,12 @@
         <title>Laravel</title>
         @vite('resources/css/app.css') 
     </head>
-    <body>
-        <h1 class="text-4xl font-semibold"> @yield('titulo')</h1>
-
-        <hr>
-
-        @yield('contenido')
+    <body class="bg-gray-100">
+        <header class="p-5 border-b bg-white shadow">
+            <h1 class="text-3xl from-black">
+                DevStagram
+            </h1>
+        </header>
 
     </body>
 </html>
