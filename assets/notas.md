@@ -26,4 +26,36 @@ Son ataques que se realizan a través de sitios web legítimos en los que el usu
 #csrf 
 Es un token que se genera en cada petición y se envía al servidor, el servidor lo valida y si es correcto, se ejecuta la petición.
 
+# Migraciones 
+Las migraciones se les conoce como el esquema de la base de datos, es decir, las tablas y sus columnas.
+Si se desea agregar una columna a una tabla, se debe crear una migración y ejecutarla, 
+Si la migracion no fue correcta se puede revertir
+# Crear migración
+sail php artisan migrate
+sail artisan migrate
+# Revertir migración
+sail artisan migrate:rollback
+# si muchas migraciones se pueden revertir con
+sail artisan migrate:rollback --step=5
+
+# otras formas de migrar campos en especifico	
+sail artisan make:migration agregar_imagen_user
+
+- las migraciones las encontramos en la carpeta database/migrations
+- laravel nos crea por default una tabla llamada 'user' que es la tabla de usuarios
+proceso de la creacion 
+1. Crear migración
+sail artisan migrate
+2. Revisar en el mys de dockers con el comando
+sail mysql -u
+-> show databases;
+-> use devstagram;
+-> show tables;
+-> describe users;
+3. Revertir migración
+sail php artisan migrate:rollback
+-> show tables;    vemos q esta vacia
+
+# Crear conexión a la base de datos
+Los datos de conexión a la base de datos se encuentran en el archivo .env
 
