@@ -10,13 +10,11 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="antialiased">
-
         <nav>
             <a href="/">Principal</a>
             <a href="/nosotros">Nosotros</a>
             <a href="/tienda">Tienda</a>
         </nav>
-
-       <h1>Página principal</h1>
+       <h1>Tienda</h1>
     </body>
 </html>
