@@ -12,3 +12,11 @@ En el archivo de tailwind es donde configuramos donde queremos aplicar los eslti
 
 arrancamos los estilos de tailwind  (desde otra terminal)
 - sail npm run dev
+
+# validaciones para el formulario de registro
+laradevs
+laravel-valdiation-en-español - https://github.com/MarcoGomesr/laravel-validation-en-espanol
+clonar en la carpeta de resources/lang/es
+git clone https://github.com/MarcoGomesr/laravel-validation-en-espanol.git resources/lang/es
+
+- para configurar a español vamos a "config/app.php" y cambiamos el locale a "es"
