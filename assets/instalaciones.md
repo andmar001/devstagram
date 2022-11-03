@@ -20,3 +20,6 @@ clonar en la carpeta de resources/lang/es
 git clone https://github.com/MarcoGomesr/laravel-validation-en-espanol.git resources/lang/es
 
 - para configurar a español vamos a "config/app.php" y cambiamos el locale a "es"
+
+novalidate - para que no valide el formulario, para que sea desde le servidor
+
