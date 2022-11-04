@@ -67,3 +67,27 @@ sail artisan migrate
 # Crear conexión a la base de datos
 Los datos de conexión a la base de datos se encuentran en el archivo .env
 
+# El campo del modelo fillable, es para indicar que campos se pueden llenar desde el formulario, si no se indica, no se podra llenar el campo desde el formulario.
+
+# hash de contraseñas -facades
+Hash::make($request->password)
+Los facades son clases que nos permiten acceder a métodos estáticos de clases sin necesidad de instanciarlas.
+
+# helpers de laravel
+- lower 
+La funcion lower de laravel, nos permite convertir una cadena a minusculas
+- slug
+La funcion slug de laravel, nos permite convertir una cadena a minusculas y remplazar los espacios por guiones (tony tolver) pasa a  (tony-tolver)
+sin embargo slug no valida registros duplicados.
+
+
+- revertir la ultima migracion
+$ sail php artisan migrate:rollback --step=1
+- agregar de nuevo los cambios
+$ sail php artisan migrate
+
+# refrescar la base de datos, eliminar todos los datos y volver a crearlos, limpia la base de datos y la vuelve a crear
+-  sail php artisan migrate:refresh
+
+el atributo unique dontro de la migracion, es para indicar que el campo debe ser unico, es decir, no se puede repetir en la tabla.
+por ejemplo los usuarios de twitter, no pueden tener el mismo nombre de usuario.
