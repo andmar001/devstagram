@@ -26,6 +26,8 @@ Son ataques que se realizan a través de sitios web legítimos en los que el usu
 #csrf 
 Es un token que se genera en cada petición y se envía al servidor, el servidor lo valida y si es correcto, se ejecuta la petición.
 
+cuando colocamos nuestra ruta como un post tenemos acceso a la directiva csrf la cual nos ayuda a evitar los ataques csrf
+
 # Migraciones 
 Las migraciones se les conoce como el esquema de la base de datos, es decir, las tablas y sus columnas.
 Si se desea agregar una columna a una tabla, se debe crear una migración y ejecutarla, 

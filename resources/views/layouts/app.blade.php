@@ -21,9 +21,13 @@
                                 {{ auth()->user()->username}}
                             </span>
                         </a>
-                        <a href="{{ route('logout') }}" class="font-bold uppercase text-gray-600 text-sm">
-                            Cerrar Sesión
-                        </a>
+                        {{-- post para hacer segura el redireccion y evitar ataques csrf--}}
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="font-bold uppercase text-gray-600 text-sm">
+                                Cerrar Sesión
+                            </button>
+                        </form>
                     </nav>
                 @endauth
 
