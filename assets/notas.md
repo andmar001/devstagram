@@ -28,6 +28,10 @@ Es un token que se genera en cada petición y se envía al servidor, el servidor
 
 cuando colocamos nuestra ruta como un post tenemos acceso a la directiva csrf la cual nos ayuda a evitar los ataques csrf
 
+->remember nos ayuda a recordar la sesión del usuario, esta para cuando el usuario se loguea y cierra el navegador, al volver a ingresar, no tenga que volver a loguearse. 
+Una vez que agregamos este método, tenemos que agregar la directiva @csrf en el formulario para que el token sea enviado al servidor.
+
+
 # Migraciones 
 Las migraciones se les conoce como el esquema de la base de datos, es decir, las tablas y sus columnas.
 Si se desea agregar una columna a una tabla, se debe crear una migración y ejecutarla, 
