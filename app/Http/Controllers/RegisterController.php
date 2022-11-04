@@ -20,7 +20,7 @@ class RegisterController extends Controller
         //dd($request -> get('name'));
         
         //Modificar el request 
-        $request->$request->add(['username' => Str::slug($request->username)]);
+        $request->request->add(['username' => Str::slug($request->username)]);
 
         // Validacion de datos
         $this->validate($request, [
@@ -37,5 +37,8 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make( $request->password )
         ]);
+
+        // Redireccion 
+        return redirect()->route('posts.index');
     }
 }

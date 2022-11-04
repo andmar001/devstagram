@@ -25,3 +25,7 @@ novalidate - para que no valide el formulario, para que sea desde le servidor
 
 password_confirmation - para que el usuario confirme la contraseña
 la validacion para confirmar la contraseña se agrega como "confirmed".
+
+# Controladores
+sail php artisan make:controller PostController
+sail php artisan make:controller LoginController
