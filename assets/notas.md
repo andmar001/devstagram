@@ -56,6 +56,14 @@ sail mysql -u
 sail php artisan migrate:rollback
 -> show tables;    vemos q esta vacia
 
+- primer migracion
+sail artisan make:migration add_username_to_user_table
+
+para la creacion de una nueva migracion laravel nos crea la migracion acorde al nombre que le demos, en este caso 'add_username_to_user_table' y nos crea un metodo up() y un metodo down(), donde hara referencia a users.
+
+- Importante correr la migracion, para ver los cambios en la base de datos
+sail artisan migrate
+
 # Crear conexión a la base de datos
 Los datos de conexión a la base de datos se encuentran en el archivo .env
 
