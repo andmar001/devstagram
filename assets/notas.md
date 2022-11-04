@@ -91,3 +91,7 @@ $ sail php artisan migrate
 
 el atributo unique dontro de la migracion, es para indicar que el campo debe ser unico, es decir, no se puede repetir en la tabla.
 por ejemplo los usuarios de twitter, no pueden tener el mismo nombre de usuario.
+
+
+# Autenticación
+auth()->user()  # nos devuelve el usuario autenticado, se ejcuta una vez que hacemos el post del login, el objeto "attributes" contiene los datos del usuario autenticado
