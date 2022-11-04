@@ -95,3 +95,5 @@ por ejemplo los usuarios de twitter, no pueden tener el mismo nombre de usuario.
 
 # Autenticación
 auth()->user()  # nos devuelve el usuario autenticado, se ejcuta una vez que hacemos el post del login, el objeto "attributes" contiene los datos del usuario autenticado
+
+dd() es una funcion de laravel que nos permite ver el contenido de una variable, es como un var_dump() de php 
