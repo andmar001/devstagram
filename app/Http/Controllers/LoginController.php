@@ -18,6 +18,14 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
         
+        // false en caso que el usuario no se autentique
+        if(!auth()->attempt($request->only('email','password'))){
+            // regresate a la pagina anterior con el mensaje de error
+            return back()->with('mensaje', 'Credenciales incorrectas');
+        }
+
+        //si se autentico correctamente
+        return redirect()->route('posts.index');
     }
 
 }

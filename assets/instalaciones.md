@@ -19,6 +19,9 @@ laravel-valdiation-en-español - https://github.com/MarcoGomesr/laravel-validati
 clonar en la carpeta de resources/lang/es
 git clone https://github.com/MarcoGomesr/laravel-validation-en-espanol.git resources/lang/es
 
+En el controlador la opcion width es para que se muestre el error en el formulario
+De controlador a vista (controller - blade.php)
+
 - para configurar a español vamos a "config/app.php" y cambiamos el locale a "es"
 
 novalidate - para que no valide el formulario, para que sea desde le servidor
