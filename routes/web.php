@@ -29,8 +29,8 @@ Route::get('/login', [LoginController::class,'index'])->name('login');
 Route::post('/login', [LoginController::class,'store']);
 Route::post('/logout', [LogoutController::class,'store'])->name('logout');
 
-
-Route::get('/muro', [PostController::class,'index'])->name('posts.index');
+//Al colocar entre llaves el modelo se applica el route model binding
+Route::get('/{user:username}', [PostController::class,'index'])->name('posts.index');
 
 
 

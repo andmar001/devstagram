@@ -103,3 +103,7 @@ por ejemplo los usuarios de twitter, no pueden tener el mismo nombre de usuario.
 auth()->user()  # nos devuelve el usuario autenticado, se ejcuta una vez que hacemos el post del login, el objeto "attributes" contiene los datos del usuario autenticado
 
 dd() es una funcion de laravel que nos permite ver el contenido de una variable, es como un var_dump() de php 
+
+# route model binding
+- laravel nos permite pasar el modelo como parametro en la ruta, y laravel lo busca en la base de datos y lo pasa como parametro al controlador
+La ruta se asocia a un modelo, y laravel busca el modelo en la base de datos y lo pasa como parametro al controlador
