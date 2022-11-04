@@ -1,3 +1,5 @@
+# repo
+https://github.com/codigoconjuan/devstagram
 # nota importante 
 Siempre ir a la carpeta de devstagram una vez que ingresas al wsl
 
