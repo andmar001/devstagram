@@ -7,9 +7,12 @@ use Illuminate\Http\Request;
 class ImagenController extends Controller
 {
     // metodo para GUARDAR la imagen
-    public function store()
+    public function store(Request $request)
     {
-        return "Desde el controlador ImagenController";
+        $imagen = $request->file('file');
+
+        //validar que el archivo sea una imagen
+        return response()->json(['imagen' => $imagen->extension()]);
     }
 
 }
