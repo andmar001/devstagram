@@ -34,3 +34,6 @@ la validacion para confirmar la contraseña se agrega como "confirmed".
 # Controladores
 sail php artisan make:controller PostController
 sail php artisan make:controller LoginController
+
+# iconos
+heroiicons.com

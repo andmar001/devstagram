@@ -32,5 +32,7 @@ Route::post('/logout', [LogoutController::class,'store'])->name('logout');
 //Al colocar entre llaves el modelo se applica el route model binding
 Route::get('/{user:username}', [PostController::class,'index'])->name('posts.index');
 
+Route::get('/posts/create', [PostController::class,'create'])->name('posts.create');
+
 
 
