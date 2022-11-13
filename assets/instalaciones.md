@@ -39,6 +39,13 @@ sail php artisan make:controller LoginController
 heroiicons.com
 
 # dropzone
-$ npm install --save dropzone
+npm install --save dropzone
+agregar a la vista
 
-<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+- ejecutar mix
+sail npm run mix
+
+# controlador para las imagenes
+sail artisan make:controller ImagenController
+
+
