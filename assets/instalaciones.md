@@ -37,3 +37,8 @@ sail php artisan make:controller LoginController
 
 # iconos
 heroiicons.com
+
+# dropzone
+$ npm install --save dropzone
+
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
