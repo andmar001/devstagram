@@ -48,4 +48,6 @@ sail npm run mix
 # controlador para las imagenes
 sail artisan make:controller ImagenController
 
+- directiva stack
+para agregar estilos predeterminados a la vista, cargar librerias solo en la vista que se necesite
 
