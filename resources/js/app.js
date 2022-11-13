@@ -10,3 +10,7 @@ const dropzone = new Dropzone("#dropzone", {
     maxFiles: 1,
     uploadMultiple: false
 })
+
+dropzone.on("sending", function(file, xhrm, formData){
+    console.log(file);
+})
