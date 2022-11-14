@@ -107,3 +107,14 @@ dd() es una funcion de laravel que nos permite ver el contenido de una variable,
 # route model binding
 - laravel nos permite pasar el modelo como parametro en la ruta, y laravel lo busca en la base de datos y lo pasa como parametro al controlador
 La ruta se asocia a un modelo, y laravel busca el modelo en la base de datos y lo pasa como parametro al controlador
+
+## Crear modelo
+ sail artisan make:model Post
+
+## Crear migración
+sail artisan make:migration create_posts_table
+
+# creacion de modelo, migracion, controlador y factory
+sail artisan make:model --migration --controller --factory Post
+
+
