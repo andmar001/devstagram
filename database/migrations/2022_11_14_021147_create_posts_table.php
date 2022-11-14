@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->text('descripcion');
+            $table->string('imagen');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');   // Foreign key
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('posts');   // Drop table completely
     }
 };

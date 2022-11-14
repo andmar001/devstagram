@@ -117,4 +117,6 @@ sail artisan make:migration create_posts_table
 # creacion de modelo, migracion, controlador y factory
 sail artisan make:model --migration --controller --factory Post
 
+# realizar la migracion
+sail artisan migrate
 
