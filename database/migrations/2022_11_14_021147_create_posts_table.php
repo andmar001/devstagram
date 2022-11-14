@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('titulo');
             $table->text('descripcion');
             $table->string('imagen');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');   // Foreign key
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');   // Foreign key para la relacion del usuario y los posts
             $table->timestamps();
         });
     }

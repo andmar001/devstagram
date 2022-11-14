@@ -120,3 +120,64 @@ sail artisan make:model --migration --controller --factory Post
 # realizar la migracion
 sail artisan migrate
 
+# factory
+sail artisan make:factory PruebaFactory
+- El factory nos permite crear registros de prueba
+- podemos verificar que el tipo de dato sea el correcto
+
+- realizar la prueba
+# sail artisan tinker               --> nos permite ejecutar codigo php, como editor nano
+ 
+salida de la prueba 
+>>> $usuario = User::find(5);                         ------> ingresar un usuario existente
+=> App\Models\User {#4665
+     id: 5,
+     name: "Lord Java",
+     email: "react@gmail.com",
+     email_verified_at: null,
+     #password: "$2y$10$nuwk4EE6jLhNKhcfDPdvSeaUfabXYRW.EbU4GJqt1657tFFUXAl4i",
+     #remember_token: null,
+     created_at: "2022-11-04 02:58:17",
+     updated_at: "2022-11-04 02:58:17",
+     username: "react-boss",
+   }
+
+# ejecucion de la prueba del post factory
+
+>>> Post::factory()->times(200);             ---> crea 200 registros de prueba
+
+
+// sentence crea un enunciado aleatorio
+// ejemplo
+- colocar id de usuario existente para realizar las pruebas
+// tony@DESKTOP-TONYMONTANA:/mnt/c/php/devstagram$ sail artisan tinker
+// Psy Shell v0.11.8 (PHP 8.1.12 — cli) by Justin Hileman
+// >>> Post::factory()->times(200)->create();
+// [!] Aliasing 'Post' to 'App\Models\Post' for this Tinker session.
+// => Illuminate\Database\Eloquent\Collection {#3715
+//      all: [
+//        App\Models\Post {#3744
+//          titulo: "Explicabo aperiam expedita fugiat dolores amet.",
+//          descripcion: "Inventore facere aspernatur quia qui nulla quas est eum ipsa assumenda et harum eligendi dicta voluptatem sunt autem consequuntur et officiis iusto ipsa unde.",
+//          imagen: "16903384-7972-3a85-87fd-29713b57d5d1.jpg",
+//          user_id: 4,
+//          updated_at: "2022-11-14 02:43:41",
+//          created_at: "2022-11-14 02:43:41",
+//          id: 20,
+//        },
+//        App\Models\Post {#3738
+//          titulo: "Expedita consequatur sit fugit.",
+//          descripcion: "Impedit maxime voluptas aut et nobis et rerum vel dolor aut enim nostrum sunt tempora et officiis quia rerum non accusamus.",
+//          imagen: "ad01e585-5cec-3da3-8a1a-acc8dc07a838.jpg",
+//          user_id: 8,
+//          updated_at: "2022-11-14 02:43:41",
+//          created_at: "2022-11-14 02:43:41",
+//          id: 21,
+//        },}
+
+- notas usar factory solo en entornos de desarrollo, no en produccion ya que los servicio cobran por el uso de la base de datos
+
+# Con esta instrucion llenamos nuestra base de datos con 200 registros de prueba, realizando la union entre las tablas de usuarios y posts
+
+- si deseamos revertir la migracion por algun error en la creacion de los registros de prueba, podemos ejecutar el siguiente comando
+sail artisan migrate:rollback --step=1
