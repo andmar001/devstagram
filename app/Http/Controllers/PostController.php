@@ -32,6 +32,7 @@ class PostController extends Controller
         $this->validate($request,[
             'titulo' => 'required|max:255',
             'descripcion' => 'required',
+            'imagen' => 'required',
         ]);
     }
 }
