@@ -25,4 +25,13 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
+
+    // guarda y valida en la base de datos
+    public function store( Request $request)
+    {
+        $this->validate($request,[
+            'titulo' => 'required|max:255',
+            'descripcion' => 'required',
+        ]);
+    }
 }
