@@ -51,3 +51,12 @@ sail artisan make:controller ImagenController
 - directiva stack
 para agregar estilos predeterminados a la vista, cargar librerias solo en la vista que se necesite
 
+# manipular las imagenes con intervention
+composer require intervention/image
+
+package autodiscovery es la instalacion de un paquetes, lavarel lo hace automaticamente
+instalación de paquetes en laravel
+- sail composer require intervention/image
+
+integracion con laravel 
+- config/app.php

@@ -12,7 +12,7 @@ class ImagenController extends Controller
         $imagen = $request->file('file');
 
         //validar que el archivo sea una imagen
-        return response()->json(['imagen' => $imagen->extension()]);
+        return response()->json(['imagen' => 'probando respuesta']);
     }
 
 }
