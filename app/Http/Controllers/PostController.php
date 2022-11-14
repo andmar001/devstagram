@@ -37,12 +37,20 @@ class PostController extends Controller
         ]);
 
         //crear el post
-        Post::create([
-            'titulo' => $request->titulo,
-            'descripcion' => $request->descripcion,
-            'imagen' => $request->imagen,
-            'user_id' => auth()->user()->id, //guarda el id del usuario que esta autenticado
-        ]);
+        // Post::create([
+        //     'titulo' => $request->titulo,
+        //     'descripcion' => $request->descripcion,
+        //     'imagen' => $request->imagen,
+        //     'user_id' => auth()->user()->id, //guarda el id del usuario que esta autenticado
+        // ]);
+
+        //Otra forma de guardar en la base de datos
+        $post = new Post; //crea una nueva instancia de la clase Post
+        $post->titulo = $request->titulo;
+        $post->descripcion = $request->descripcion;
+        $post->imagen = $request->imagen;
+        $post->user_id = auth()->user()->id;
+        $post->save(); //guardar en la base de datos
 
         //Llevar al muro del usuario
         return redirect()->route('posts.index', auth()->user()->username);
